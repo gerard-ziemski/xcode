@@ -4,11 +4,11 @@
 gerard.ziemski@oracle.com
 
 ## Instructions:
-Place the "xcode" folder inside openjdk "jdk" folder, 
-"cd" into it and execute "run_clean.sh"
+Place the `xcode` folder inside openjdk `jdk` folder, 
+`cd` into it and execute `run_clean.sh`
 
 It will take a while to build hotspot VM first, 
-it will then generate Xcode project in "build/xcode" folder,
+it will then generate Xcode project in `build/xcode` folder,
 which you can double click to open and use Xcode IDE to develop/debug/run java
 and take an advantage of modern IDE features via UI.
 
