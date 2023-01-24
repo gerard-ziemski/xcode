@@ -14,7 +14,7 @@ and take an advantage of modern IDE features via UI.
 
 ## Examples:
 
-To see how to turn on `UndefinedBehaviorSanitizer` in Xcode, please see `docs/README_UBSanitizer.md`
+To see how to turn on `UndefinedBehaviorSanitizer` in Xcode, please see [docs/README_UBSanitizer.md](docs/README_UBSanitizer.md)
 
 ## Screenshots:
 
