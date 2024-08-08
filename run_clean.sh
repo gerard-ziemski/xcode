@@ -65,19 +65,19 @@ bootjdk=""
 #bootjdk="/Volumes/Work/jdks/jdk-11.0.12/Contents/Home"
 #bootjdk="/Volumes/Work/jdks/jdk-17.0.1/Contents/Home"
 
-#jtreg=""
-jtreg="/Volumes/Work/tests/jtreg/jtreg"
+jtreg=""
+#jtreg="/Volumes/Work/tests/jtreg"
 
 #gtest=""
-gtest="/Volumes/Work/tests/gtest/googletest-1.13.0"
+gtest="/Volumes/Work/tests/googletest"
 
-#debug="release"
-debug="fastdebug"
+debug="release"
+#debug="fastdebug"
 #debug="slowdebug"
 #debug="optimized"
 
-#headers=""
-headers="--disable-precompiled-headers"
+headers=""
+#headers="--disable-precompiled-headers"
 
 #warnings=""
 warnings="--disable-warnings-as-errors"
@@ -145,7 +145,7 @@ if (( ${make_err} != 0 )) ; then
 }
 fi
 
-command="time make hotspot"
+command="time make jdk"
 echo ""
 echo ${command}
 echo ""
@@ -168,7 +168,8 @@ make_err=$?
 if (( ${make_err} != 0 )) ; then
 {
   echo ""
-  echo "The build had an error, will attempt to continue"
+  echo "The build had an error, can not continue"
+  exit -1;
 }
 fi
 
@@ -189,4 +190,4 @@ ${command}
 
 rm -f *.class
 
-open "../build/xcode"
+open ${JDK_PATH}"/build/xcode"
