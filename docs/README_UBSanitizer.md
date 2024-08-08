@@ -15,3 +15,5 @@ Make sure debug mode in **Info** panel is ON (otherwise to get stack traces you 
 
 Turn ON **UndefinedBehaviorSanitizer** in **Diagnostics** panel:
 ![](images/8_UBSanitizer.png)
+
+Run the target by pressing the "play" button.
