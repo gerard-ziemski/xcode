@@ -65,11 +65,11 @@ bootjdk=""
 #bootjdk="/Volumes/Work/jdks/jdk-11.0.12/Contents/Home"
 #bootjdk="/Volumes/Work/jdks/jdk-17.0.1/Contents/Home"
 
-jtreg=""
-#jtreg="/Volumes/Work/tests/jtreg/jtreg"
+#jtreg=""
+jtreg="/Volumes/Work/tests/jtreg/jtreg"
 
-gtest=""
-#gtest="/Volumes/Work/tests/gtest/googletest-release-1.8.1"
+#gtest=""
+gtest="/Volumes/Work/tests/gtest/googletest-1.13.0"
 
 #debug="release"
 debug="fastdebug"
@@ -145,7 +145,7 @@ if (( ${make_err} != 0 )) ; then
 }
 fi
 
-command="time make images"
+command="time make hotspot"
 echo ""
 echo ${command}
 echo ""
@@ -156,6 +156,19 @@ if (( ${make_err} != 0 )) ; then
   echo ""
   echo "The build had an error, can not continue"
   exit -1;
+}
+fi
+
+command="time make images"
+echo ""
+echo ${command}
+echo ""
+${command}
+make_err=$?
+if (( ${make_err} != 0 )) ; then
+{
+  echo ""
+  echo "The build had an error, will attempt to continue"
 }
 fi
 
