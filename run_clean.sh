@@ -168,7 +168,7 @@ make_err=$?
 if (( ${make_err} != 0 )) ; then
 {
   echo ""
-  echo "The build had an error, can not continue"
+  echo "The build had an error, will try to continue regardless ..."
   exit -1;
 }
 fi
